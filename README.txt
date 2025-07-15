@@ -1,4 +1,3 @@
-It is a fully functional production package I made, please keep it confidential!
 
 1: I only used C++98 features since our system is based on Centos 6.8
 
@@ -27,7 +26,7 @@ It is a fully functional production package I made, please keep it confidential!
 	Thinking of using Cuda Thrust or cusp for Matrix and Vector handling,
         what would you recommand? or use raw pointers directly.
 
-7: You may want to disable CMAKE_CXX_FLAGS -o3 option in CMakeLists.txt if debug
+7: You may disable CMAKE_CXX_FLAGS -o3 option in CMakeLists.txt if debug
 
 
 
