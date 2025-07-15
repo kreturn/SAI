@@ -28,6 +28,8 @@
 
 7: You may disable CMAKE_CXX_FLAGS -o3 option in CMakeLists.txt if debug
 
+8: Edit par file based on your data directory
+
 
 
 	
