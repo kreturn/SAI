@@ -1,0 +1,104 @@
+#-----------------------------------------------------------------------
+#   3-D Pre-Stack Elastic Inversion
+#   Build # 011619                                            01-2019
+#-----------------------------------------------------------------------
+
+#Attention, for all the settings, use the folowwing format: NEED SPACE between "=" and "keyword" "value"
+#  keyword = value
+
+#   Processing Hosts Settings
+#	nrthreads: Number of threads to be used in each node, 
+#		   less than 0 will not set any
+#	hosts:	   Node list to be used for processing, one node per line
+#		   Example: 2 nodes r101, r102 in hosts file
+#			r101
+#			r102	
+
+nrthreads = 3
+#hosts	  = /home/ycliu/work/hosts 
+
+#   Algorithm Parameter Settings
+#        maxitn:  the number of maximum iterations
+#        nsmooth:  the smooth window
+maxitn	= 2000
+errtol  = 1e-9
+errthrehold = 0.46
+nsmooth	= 20
+solver	= bpi
+
+#   Data Info Part
+#       nrcdp:    the number of CDPs to process
+#       t0:    the trace time start (in ms)
+#       t1:    the trace time stop (in ms)
+#       tstep: the trace time step (in ms)
+#       a0:    the angle gather angle start (degree)
+#       a1:    the angle gather angle stop (degree)
+#       astep: the angle gather angle step (degree)
+is2d	= 0
+nrcdp	= 744
+t0	= 2186
+t1	= 2682
+tstep	= 2
+a0	= 3 
+a1	= 18 
+astep	= 3
+
+#    Constant C for PI Calculation PI = (Vp-Vs*C)*Density
+pic	= 1.4
+
+#   Wavelet Description Part
+#       sw:    the wavelet selection list (ms)
+sw	= -100.0 : 2.0 : 100.0
+
+#   The Filename of In-put Wavelet
+wvinp	= /home/ycliu/work/renetest/datademo/linedata/wlet.bin
+
+#    Wavelet type: 0 (volume) 1 (single)
+wvtype	= 0
+
+#   The Filename of In-put Seismic Angle Gather Data
+aginp	= /home/ycliu/work/renetest/datademo/linedata/ag.bin
+
+#   The Filename of P-Wave Velocity Model
+vpinp	= /home/ycliu/work/renetest/datademo/linedata/vp.bin
+
+#   The Filename of S-Wave Velocity Model
+vsinp	= /home/ycliu/work/renetest/datademo/linedata/vs.bin
+
+#   The Filename of Density Model
+deninp	= /home/ycliu/work/renetest/datademo/linedata/den.bin
+
+#   The Filename of Horizon Constrains
+horinp	= /home/ycliu/work/renetest/datademo/linedata/Horizonconstrain.txt 
+
+#   The Output Filename of Vp
+vpoutp	= /home/ycliu/work/renetest/datademo/linedata/ovp.bin
+
+#   The Output Filename of Vs
+vsoutp	= /home/ycliu/work/renetest/datademo/linedata/ovs.bin
+
+#   The Output Filename of Density
+denoutp	= /home/ycliu/work/renetest/datademo/linedata/oden.bin
+
+#   The jobdir for all the outputs
+jobdir = /home/ycliu/work/renetest/datademo/linedata/job
+
+#   Clean jobdir before processing: 1(yes), 0(no)
+cljobdir = 0
+
+#   The Filename of P-Wave Reflectivity
+vpr	= 
+
+#   The Filename of S-Wave Reflectivity
+vsr	= 
+
+#   The Filename of Density Reflectivity
+denr	= 
+
+#  xyfile is for 2D line only, stores x, y coordinate on each CDP
+#xyfile	= /home/ycliu/work/renetest/datademo/linedata/xy.txt
+xyfile	= 
+
+#  import reflectivities for vp, vs, density option
+#  1 means yes, 0 means no
+imprefl	= 0

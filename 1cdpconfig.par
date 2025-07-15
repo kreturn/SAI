@@ -1,0 +1,78 @@
+#-----------------------------------------------------------------------
+#   3-D Pre-Stack Elastic Inversion
+#   Build # 011619                                            01-2019
+#-----------------------------------------------------------------------
+
+
+#   Data Info Part
+#       nrcdp:    the number of CDPs to process
+#       t0:    the trace time start (ms)
+#       t1:    the trace time stop (ms)
+#       tstep: the trace time step (ms)
+#       a0:    the angle gather angle start (degree)
+#       a1:    the angle gather angle stop (degree)
+#       astep: the angle gather angle step (degree)
+nrcdp	= 1
+t0	= 2190
+t1	= 2600
+tstep	= 2
+a0	= 3 
+a1	= 18 
+astep	= 3
+
+#    Constant C for PI Calculation PI = (Vp-Vs*C)*Density
+pic	= 1.4
+
+#   Wavelet Description Part
+#       sw:    the wavelet selection list (ms)
+sw	= -100.0 : 2.0 : 100.0
+
+#   Algorithm Parameter Settings
+#        maxitn:  the number of maximum iterations
+#        nsmooth:  the smooth window
+maxitn	= 2000
+nsmooth	= 20
+solver	= bpi
+
+#   The Filename of In-put Seismic Angle Gather Data
+aginp	= /home/ycliu/work/renetest/datademo/1cdpdata/ag.bin
+
+#   The Filename of In-put Wavelet
+wvinp	= /home/ycliu/work/renetest/datademo/1cdpdata/wlet.bin
+
+#   The Filename of P-Wave Velocity Model
+vpinp	= /home/ycliu/work/renetest/datademo/1cdpdata/vp.bin
+
+#   The Filename of S-Wave Velocity Model
+vsinp	= /home/ycliu/work/renetest/datademo/1cdpdata/vs.bin
+
+#   The Filename of Density Model
+deninp	= /home/ycliu/work/renetest/datademo/1cdpdata/den.bin
+
+#   The Filename of Horizon Constrains
+horinp	= /home/ycliu/work/renetest/datademo/1cdpdata/horizonconstrain.txt 
+
+#   The Output Filename of Vp
+vpoutp	= /home/ycliu/work/renetest/datademo/1cdpdata/ovp.bin
+
+#   The Output Filename of Vs
+vsoutp	= /home/ycliu/work/renetest/datademo/1cdpdata/ovs.bin
+
+#   The Output Filename of Density
+denoutp	= /home/ycliu/work/renetest/datademo/1cdpdata/oden.bin
+
+#   The Output Filename of Density
+jobdir = /home/ycliu/work/renetest/datademo/1cdpdata/job
+
+#   The Filename of P-Wave Reflectivity
+vpr	= 
+
+#   The Filename of S-Wave Reflectivity
+vsr	= 
+
+#   The Filename of Density Reflectivity
+denr	= 
+
+#-----------------------------------------------------------------------
+#   End of Parameter File
+#-----------------------------------------------------------------------
